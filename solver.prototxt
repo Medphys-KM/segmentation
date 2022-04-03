@@ -1,0 +1,16 @@
+train_net: "${CONFIG_DIR}/train_${TRAIN_SET}.prototxt"
+
+iter_size: 10
+lr_policy: "poly"
+power: 0.9
+base_lr: 2.5e-4
+
+average_loss: 20
+display: 10
+max_iter: 1000000
+momentum: 0.9
+weight_decay: 0.0005
+
+snapshot: 1000
+snapshot_prefix: "${ROOT_DIR}/model/${DIAGNOSIS}_${ORGAN}_${NET_ID}"
+solver_mode: GPU
